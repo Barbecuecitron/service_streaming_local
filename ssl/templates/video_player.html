@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <title>Video Player</title>
   </head>
-  <body>
+  <body class="video-page">
     <h1>Video Player</h1>
     <h2> Currently Playing {{video_url}} </h2>
-    <video src="{{ url_for('static', filename=video_url) }}" controls width="920"> </video>
+    <video src="{{ url_for('serve_video', filename=video_url) }}" controls width="920"> </video>
   </body>
 </html>

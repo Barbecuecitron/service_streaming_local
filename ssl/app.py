@@ -3,7 +3,7 @@ from config.config import Config
 from utils.thumbnail_generator import build_video_previews
 from utils.folder_utility import get_video_filenames
 
-app = Flask(__name__, static_folder=Config.VIDEO_FOLDER)
+app = Flask(__name__, static_folder="static")
 app.config.from_object(Config)
 
 @app.route("/")
@@ -28,6 +28,11 @@ def list_videos():
 @app.route('/image/<path:filename>')
 def serve_image(filename):
     root_dir = "static"
+    return send_from_directory(root_dir, filename)
+
+@app.route("/<path:filename>")
+def serve_video(filename):
+    root_dir = Config.VIDEO_FOLDER
     return send_from_directory(root_dir, filename)
 
 if __name__ == "__main__":

@@ -5,9 +5,7 @@ def build_video_previews(video_filenames, video_folder, thumbnail_folder):
     videos_and_previews = []
 
     for video_name in video_filenames:
-        # actual_video_full_path = url_for('static', filename=video_name)
         img_output_path = f"static/{video_name}".replace("mp4", "jpg")
-
         vignette_name = video_name.replace("mp4", "jpg")
 
         if vignette_name in os.listdir(thumbnail_folder):
