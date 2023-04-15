@@ -6,7 +6,7 @@
   </head>
   <body class="video-page">
     <h1>Video Player</h1>
-    <h2> Currently Playing {{video_url}} </h2>
+    <h2> Vous regardez {{video_url}} </h2>
     <video src="{{ url_for('serve_video', filename=video_url) }}" controls width="920"> </video>
   </body>
 </html>

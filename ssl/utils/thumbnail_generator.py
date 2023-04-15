@@ -38,4 +38,5 @@ def build_video_previews(video_filenames, video_folder, thumbnail_folder):
                 "preview": vignette_name
             }
             videos_and_previews.append(video_plus_thumb)
+            
     return videos_and_previews
