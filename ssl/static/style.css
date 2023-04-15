@@ -1,0 +1,82 @@
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", sans-serif; /* change font family */
+  color: #333; /* change font color */
+}
+
+h1 {
+  font-size: 2em;
+  text-align: center;
+  margin: 20px 0;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  grid-gap: 20px;
+  padding: 0;
+  margin: 0;
+  border: 15px solid #cccccc00; /*Add a 1px solid border around the grid*/
+}
+
+li {
+  list-style: none;
+  border-radius: 15px;
+  background-color: rgb(237, 232, 232);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.video-container:hover {
+  background-color: rgb(156, 156, 156);
+}
+
+.video-container a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+}
+
+Set font family and color for headings
+h1, h2 {
+  color: #fff;
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 50px; /* adjust as needed */
+  font-size: 24px; /* adjust as needed */
+  color: #fff; /* adjust as needed */
+  font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif; /* adjust as needed */
+}
+
+.video-page {
+  background-color: #8a8a8a8e;
+}
+
+video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style the video controls */
+video::-webkit-media-controls {
+  display: flex;
+  /* background-color: rgba(255, 255, 255, 0); */
+  border-radius: 5px;
+}
